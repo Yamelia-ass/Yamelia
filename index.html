@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Camelia | Heels dan Flatshoes Wanita</title>
+  <meta name="description" content="Toko sepatu wanita Camelia. Pilih heels dan flatshoes, tentukan warna, ukuran, dan jumlah, lalu pesan lewat WhatsApp.">
+  <link rel="icon" href="images/ikon/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <noscript><p class="noscript">Aktifkan JavaScript di browser untuk melihat dan memesan sepatu.</p></noscript>
+
+  <header class="kepala">
+    <div class="wadah kepala-isi">
+      <a class="merek" href="#atas" aria-label="Camelia, ke atas">
+        <img src="images/ikon/logo.svg" alt="" width="34" height="34">Camelia
+      </a>
+      <nav class="menu" id="menu" aria-label="Menu utama">
+        <a href="#koleksi">Koleksi</a>
+        <a href="#ukuran">Panduan ukuran</a>
+        <a href="#cara-pesan">Cara pesan</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+      <div class="kepala-aksi">
+        <button type="button" class="tombol-keranjang" id="bukaKeranjang" aria-label="Buka keranjang">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+          <span class="teks-keranjang">Keranjang</span>
+          <span class="angka" id="jumlahKeranjang">0</span>
+        </button>
+        <button type="button" class="tombol-menu" id="tombolMenu" aria-label="Buka menu" aria-expanded="false" aria-controls="menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="atas">
+    <section class="beranda">
+      <div class="wadah beranda-isi">
+        <div class="beranda-teks">
+          <h1>Langkah anggun untuk setiap hari</h1>
+          <p>"Heels dan flatshoes pilihan Camelia dengan perpaduan desain elegan dan kenyamanan harian. Pilih model, warna, dan ukuran sesuai seleramu."</p>
+          <div class="beranda-tombol">
+            <a class="tombol tombol-utama" href="#koleksi">Lihat koleksi</a>
+            <a class="tombol tombol-garis" href="#ukuran">Cek ukuran kaki</a>
+          </div>
+        </div>
+        <div class="beranda-foto"><img id="fotoUtama" alt=""></div>
+      </div>
+    </section>
+
+    <section class="bagian" id="koleksi">
+      <div class="wadah">
+        <h2>Koleksi sepatu</h2>
+        <div class="alat">
+          <div class="saring" id="saringKategori" role="group" aria-label="Saring kategori"></div>
+        </div>
+        <div class="daftar-produk" id="daftarProduk"></div>
+        <p class="kosong" id="produkKosong" hidden></p>
+      </div>
+    </section>
+
+    <section class="bagian bagian-lembut" id="galeri">
+      <div class="wadah">
+        <h2>Galeri</h2>
+        <div class="daftar-galeri" id="daftarGaleri"></div>
+      </div>
+    </section>
+
+    <section class="bagian bagian-lembut" id="ukuran">
+      <div class="wadah">
+        <h2>Panduan ukuran</h2>
+        <div class="ukuran-isi">
+          <div class="bingkai-tabel">
+            <table class="tabel">
+              <thead><tr><th>Ukuran</th><th>Panjang kaki</th></tr></thead>
+              <tbody id="tabelUtama"></tbody>
+            </table>
+          </div>
+          <div class="kotak-ukur">
+            <h3>Cara mengukur kaki</h3>
+            <ol>
+              <li>Berdiri di atas selembar kertas, tumit rapat ke dinding.</li>
+              <li>Beri tanda di ujung jari kaki yang paling panjang.</li>
+              <li>Ukur jarak dari dinding ke tanda dalam cm.</li>
+            </ol>
+            <form id="formUkur" novalidate>
+              <label for="panjangKaki">Panjang kaki (cm)</label>
+              <div class="baris-ukur">
+                <input id="panjangKaki" inputmode="decimal" placeholder="contoh 23,8" autocomplete="off">
+                <button type="submit" class="tombol tombol-utama">Cek ukuran</button>
+              </div>
+              <p class="hasil-ukur" id="hasilUkur" role="status"></p>
+            </form>
+            <p class="catatan">Kalau ragu di antara dua ukuran, pilih yang lebih besar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bagian bagian-gelap" id="cara-pesan">
+      <div class="wadah">
+        <h2>Cara pesan</h2>
+        <ol class="langkah">
+          <li><p>Pilih sepatu yang kamu suka dari koleksi.</p></li>
+          <li><p>Tentukan warna, ukuran, dan jumlah pasang.</p></li>
+          <li><p>Isi nama, nomor HP, dan alamat di keranjang.</p></li>
+          <li><p>Kirim pesanan lewat WhatsApp, kami balas dengan ongkir dan cara bayar.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="bagian" id="kontak">
+      <div class="wadah">
+        <h2>Hubungi kami</h2>
+        <div class="daftar-kontak">
+          <a class="kontak" id="kontakWa" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.2-4.1A8 8 0 1 1 8.2 19L4 20z"/><path d="M9 8.5c.3 2.5 2.5 5 5.5 6l1.2-1.2-1.8-1-.8.7c-.8-.4-1.6-1.2-2-2l.7-.8-1-1.8L9 8.5z"/></svg>
+            <span><strong>WhatsApp</strong><span id="teksWa"></span></span>
+          </a>
+          <a class="kontak" id="kontakIg" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".8"/></svg>
+            <span><strong>Instagram</strong><span id="teksIg"></span></span>
+          </a>
+          <a class="kontak" id="kontakEmail" href="#">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>
+            <span><strong>Email</strong><span id="teksEmail"></span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="kaki">
+    <div class="wadah">&copy; <span id="tahun"></span> Camelia. Semua hak dilindungi.</div>
+  </footer>
+
+  <!-- Jendela pilih warna, ukuran, jumlah -->
+  <dialog class="jendela" id="jendelaProduk" aria-labelledby="namaPilih">
+    <button type="button" class="tutup" data-tutup aria-label="Tutup">&times;</button>
+    <div class="pilih">
+      <div class="pilih-foto"><img id="fotoPilih" alt=""></div>
+      <div class="pilih-isi">
+        <h2 id="namaPilih"></h2>
+        <p class="harga" id="hargaPilih"></p>
+        <p class="deskripsi" id="deskripsiPilih"></p>
+        <ol class="tahap" id="penandaTahap"><li>Warna</li><li>Ukuran</li><li>Jumlah</li></ol>
+        <div class="panel" id="panelPilih"></div>
+        <p class="pesan-salah" id="salahPilih" role="alert"></p>
+        <div class="navigasi">
+          <button type="button" class="tombol tombol-garis" id="tahapKembali">Kembali</button>
+          <button type="button" class="tombol tombol-utama" id="tahapLanjut">Lanjut</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Keranjang -->
+  <dialog class="laci" id="laciKeranjang" aria-labelledby="judulLaci">
+    <div class="laci-kepala">
+      <h2 id="judulLaci">Keranjang</h2>
+      <button type="button" class="tutup" data-tutup aria-label="Tutup">&times;</button>
+    </div>
+
+    <section class="laci-tahap" id="tahapKeranjang">
+      <div class="laci-badan" id="isiKeranjang"></div>
+      <div class="laci-bawah" id="bawahKeranjang" hidden>
+        <p class="total"><span>Total</span><strong id="totalKeranjang"></strong></p>
+        <button type="button" class="tombol tombol-utama lebar" id="keData">Lanjut isi data penerima</button>
+        <div class="dua" style="margin-top:10px">
+          <button type="button" class="tombol tombol-garis" data-tutup>Belanja lagi</button>
+          <button type="button" class="tombol tombol-garis" id="kosongkan">Kosongkan</button>
+        </div>
+      </div>
+    </section>
+
+    <form class="laci-tahap" id="tahapData" hidden novalidate>
+      <div class="laci-badan">
+        <label for="isiNama">Nama penerima</label>
+        <input id="isiNama" name="nama" autocomplete="name">
+        <label for="isiHp">Nomor HP / WhatsApp</label>
+        <input id="isiHp" name="hp" type="tel" inputmode="tel" autocomplete="tel">
+        <label for="isiAlamat">Alamat lengkap</label>
+        <textarea id="isiAlamat" name="alamat" rows="4" autocomplete="street-address" placeholder="Jalan, nomor, kelurahan, kecamatan, kota, kode pos"></textarea>
+        <label for="isiCatatan">Catatan (opsional)</label>
+        <textarea id="isiCatatan" name="catatan" rows="2"></textarea>
+        <p class="pesan-salah" id="salahData" role="alert"></p>
+      </div>
+      <div class="laci-bawah">
+        <div class="dua">
+          <button type="button" class="tombol tombol-garis" id="dataKembali">Kembali</button>
+          <button type="submit" class="tombol tombol-utama">Periksa pesanan</button>
+        </div>
+      </div>
+    </form>
+
+    <section class="laci-tahap" id="tahapPeriksa" hidden>
+      <div class="laci-badan">
+        <div id="isiPeriksa"></div>
+        <p class="pesan-salah" id="salahKirim" role="alert"></p>
+      </div>
+      <div class="laci-bawah">
+        <a class="tombol tombol-wa lebar" id="kirimWa" href="#" target="_blank" rel="noopener">Kirim pesanan lewat WhatsApp</a>
+        <div class="dua">
+          <button type="button" class="tombol tombol-garis" id="periksaKembali">Ubah data</button>
+        </div>
+      </div>
+    </section>
+  </dialog>
+
+  <script src="js/pengaturan.js"></script>
+  <script src="js/produk.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
